@@ -5,7 +5,7 @@ import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    background: "transparent",
   },
   timeLine: {
     position: "relative",

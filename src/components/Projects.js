@@ -19,7 +19,7 @@ import project6 from "../images/react.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    background: "transparent",
     height: "100%",
   },
   cardContainer: {
@@ -79,7 +79,7 @@ const projects = [
   },
 ];
 
-const Portfolio = () => {
+const Projects = () => {
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>
@@ -120,4 +120,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;
