@@ -2,10 +2,13 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: "transparent",
+    paddingTop: "50px",
+    paddingBottom: "50px"
   },
   timeLine: {
     position: "relative",
@@ -112,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
 const Resume = () => {
   const classes = useStyles();
   return (
-    <Box component="header" className={classes.mainContainer}>
+    <Box  id="resume-section" component="header" className={classes.mainContainer}>
       <Typography variant="h4" align="center" className={classes.heading}>
         Working Experience
       </Typography>
@@ -121,7 +124,7 @@ const Resume = () => {
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2013
+         2024
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -132,24 +135,30 @@ const Resume = () => {
             web design
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+           Employee Management Portal
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+            Built a responsive MERN stack application with <strong>Node.js, React, and MongoDB Atlas</strong>. 
+            Automated HR workflows and optimized data retrieval for high-traffic environments.<br/>
+            <Link 
+    href="https://employee-frontend-lovat.vercel.app/" 
+    target="_blank" 
+    rel="noopener"
+    style={{ color: "tomato", cursor: "pointer" }}
+  >
+    https://employee-frontend-lovat.vercel.app/
+  </Link>
           </Typography>
         </Box>
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2014
+         2026
         </Typography>
         <Box component="div" className={classes.timeLineItem}>
           <Typography
@@ -157,76 +166,18 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            html & css
+         Full Stack Developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
+          Asset Management System
           </Typography>
           <Typography
             variant="subtitle1"
             align="center"
             className={classes.subtitle1}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
-        </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2015
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Fullstack Javascript
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
-          </Typography>
-        </Box>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2017
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Django & React
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            company name where worked
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas
-            ipsa, laudantium totam perferendis possimus voluptatibus tenetur.
-            Quasi voluptatibus, nam vitae eaque ad, officia laboriosam
-            repudiandae, rerum necessitatibus nisi mollitia.
+         Engineered a scalable enterprise solution using <strong>React, .NET Core, and PostgreSQL</strong>. 
+            Implemented JWT authentication and managed full lifecycle tracking for hardware assets.
           </Typography>
         </Box>
       </Box>

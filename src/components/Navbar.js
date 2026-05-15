@@ -15,7 +15,7 @@ import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu"; // Changed to Menu icon
 import AssignmentInd from "@material-ui/icons/AssignmentInd";
-import Home from "@material-ui/icons/Home";
+import InfoIcon from "@material-ui/icons/Info";
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
@@ -73,10 +73,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const menuItems = [
-  { listIcon: <Home />, listText: "Home", listPath: "/" },
-  { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Projects", listPath: "/Projects" },
-  { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
+  { listIcon: <InfoIcon />, listText: "About", listPath: "#about-section" },
+  { listIcon: <AssignmentInd />, listText: "Resume", listPath: "#resume-section" },
+  { listIcon: <Apps />, listText: "Projects", listPath: "#projects-section" },
+  { listIcon: <ContactMail />, listText: "Contact", listPath: "#contact-section" },
 ];
 
 const Navbar = () => {
@@ -94,8 +94,8 @@ const Navbar = () => {
             key={i}
             className={classes.listItem}
             onClick={() => setOpen(false)}
-            component={Link}
-            to={item.listPath}
+            component="a"
+            href={item.listPath}
           >
             <ListItemIcon className={classes.listItem}>
               {item.listIcon}
@@ -122,8 +122,8 @@ const Navbar = () => {
               {menuItems.map((item, i) => (
                 <Typography
                   key={i}
-                  component={Link}
-                  to={item.listPath}
+                  component="a"
+                  href={item.listPath}
                   className={classes.navLink}
                 >
                   {item.listText}

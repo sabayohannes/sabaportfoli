@@ -8,6 +8,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import Contact from "./Contact"; 
+import Projects from "./Projects";
+import Resume from "./Resume";
+import About from "./About"
 
 const useStyles = makeStyles((theme) => ({
   // Add this '@global' block at the top of your useStyles object
@@ -39,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
   buttonContainer: {
     marginTop: "2rem",
     display: "flex",
+    marginBottom: "4rem",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
@@ -64,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateY(-3px)",
     },
   },
-  aboutSection: {
+  Section: {
     maxWidth: "800px",
     margin: "4rem auto 2rem auto",
     padding: "2rem",
@@ -79,17 +84,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "1.5rem",
     },
   },
-  aboutTitle: {
-    color: "tomato",
-    marginBottom: "1rem",
-    textTransform: "uppercase",
-    letterSpacing: "2px",
-  },
-  aboutText: {
-    color: "tan",
-    fontSize: "1.1rem",
-    lineHeight: "1.8",
-  },
+  
   skillsSection: {
     display: "flex",
     justifyContent: "center",
@@ -239,58 +234,21 @@ const Header = () => {
         </Typography>
 
         <Box className={classes.buttonContainer}>
-          <Button variant="outlined" className={classes.button} component={Link} to="/projects">
+          <Button variant="outlined" className={classes.button} component="a" href="#projects-section">
             View Work
           </Button>
-          <Button variant="outlined" className={classes.button} component={Link} to="/resume">
+          <Button variant="outlined" className={classes.button} component="a" href="#resume-section">
             Download CV
           </Button>
-          <Button variant="outlined" className={classes.button} component={Link} to="/contact">
+          <Button variant="outlined" className={classes.button} component="a" href="#contact-section">
             Get in Touch
           </Button>
         </Box>
       </Box>
-
-      <Box className={classes.aboutSection}>
-        <Typography variant="h5" className={classes.aboutTitle}>About Me</Typography>
-        <Typography variant="body1" className={classes.aboutText}>
-          Senior Full-Stack Developer specializing in building scalable web applications with .NET and React.
-        </Typography>
-      </Box>
-
-      <Box className={classes.skillsSection}>
-        <Box className={classes.skillCard}>
-          <Typography variant="h5" className={classes.title}>Frontend</Typography>
-          <ul className={classes.skillList}>
-            <li>React.js & Redux</li>
-            <li>Material UI / Mantis</li>
-            <li>JavaScript (ES6+)</li>
-            <li>Responsive Design</li>
-          </ul>
-        </Box>
-
-        <Box className={classes.skillCard}>
-          <Typography variant="h5" className={classes.title}>Backend</Typography>
-          <ul className={classes.skillList}>
-            <li>.NET Core / C#</li>
-            <li>RESTful APIs</li>
-            <li>Node.js</li>
-            <li>Asset Management Logic</li>
-          </ul>
-        </Box>
-
-        <Box className={classes.skillCard}>
-          <Typography variant="h5" className={classes.title}>Database</Typography>
-          <ul className={classes.skillList}>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-            <li>SQL Server</li>
-            <li>Database Architecture</li>
-          </ul>
-        </Box>
-      </Box>
-
-      <Box className={classes.featuresSection}>
+        <About/>
+        <Resume/>
+        <Projects/>
+          <Box className={classes.featuresSection}>
         <Typography variant="h4" align="center" className={classes.heading}>
           Core Project Capabilities
         </Typography>
@@ -322,24 +280,25 @@ const Header = () => {
           
         </Box>
       </Box>
-      <Box className={classes.contactSection}>
+      <Box className={classes.contactSection} paddingBottom="0px">
   <Typography variant="h3" className={classes.contactTitle}>
     Get In Touch
   </Typography>
-  <Typography variant="body1" className={classes.contactSubtitle}>
+  <Typography variant="body1" className={classes.contactSubtitle} >
     I'm currently looking for new opportunities in Full-Stack development. 
     Whether you have a question or just want to say hi, my inbox is always open!
   </Typography>
   <Button 
-    variant="outlined" 
-    className={classes.contactButton}
-    component={Link} 
-    to="/contact"
-  >
+  variant="outlined" 
+  className={classes.button} 
+  href="#contact-section" 
+>
     Say Hello
   </Button>
 </Box>
-
+<Box id="contact-section" className={classes.contactSection}>
+  <Contact />
+</Box>
 <Box component="footer" className={classes.footer}>
   <Typography variant="body2">
     Designed & Built by Saba Yohannes — 2026
