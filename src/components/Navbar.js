@@ -31,7 +31,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "tan",
-    flexGrow: 1, // Pushes menu items to the right
+    flexGrow: 1,
+    textDecoration: "none", 
+    cursor: "pointer",       
+    "&:hover": {
+      color: "tomato",      
+    },
   },
   // Mobile icon hidden on desktop
   menuIcon: {
@@ -113,7 +118,12 @@ const Navbar = () => {
         <AppBar position="fixed" className={classes.appbar}>
           <Toolbar>
             {/* 2. Brand Title */}
-            <Typography variant="h5" className={classes.title}>
+            <Typography 
+              variant="h5" 
+              className={classes.title}
+              component="a"
+              href="#home-section"
+            >
              SY
             </Typography>
 

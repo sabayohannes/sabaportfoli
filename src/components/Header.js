@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     zIndex: 1,
     marginTop: "15vh",
+    scrollMarginTop: "100px"
   },
   buttonContainer: {
     marginTop: "2rem",
@@ -216,7 +217,7 @@ const Header = () => {
 
   return (
     <>
-      <Box className={classes.typedContainer}>
+      <Box  id="home-section" className={classes.typedContainer} >
         <Grid container justifyContent="center">
           <Avatar className={classes.avatar} src={avatar} alt="Saba Yohannes" />
         </Grid>
