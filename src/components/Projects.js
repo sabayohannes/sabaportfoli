@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
       borderColor: "tomato",
       boxShadow: "0 0 20px rgba(255, 99, 71, 0.3)",
     },
-    transition: "all 0.4s ease",
+  
     [theme.breakpoints.down(750)]: {
       width: "100%",
       maxWidth: "500px",
