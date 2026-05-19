@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 // 1. If you want scrolling, swap Link for ScrollLink later
-import { Link } from "react-router-dom"; 
 import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";

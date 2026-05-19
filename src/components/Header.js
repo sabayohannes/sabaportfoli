@@ -7,11 +7,11 @@ import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
 import { Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import Contact from "./Contact"; 
 import Projects from "./Projects";
 import Resume from "./Resume";
 import About from "./About"
+import Footer from "./Footer"
 
 const useStyles = makeStyles((theme) => ({
   // Add this '@global' block at the top of your useStyles object
@@ -70,68 +70,11 @@ const useStyles = makeStyles((theme) => ({
       transform: "translateY(-3px)",
     },
   },
-  Section: {
-    maxWidth: "800px",
-    margin: "4rem auto 2rem auto",
-    padding: "2rem",
-    background: "rgba(35, 51, 51, 0.4)",
-    backdropFilter: "blur(10px)",
-    borderRadius: "15px",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
-    textAlign: "center",
-    [theme.breakpoints.down("sm")]: {
-      width: "90%",
-      margin: "2rem auto",
-      padding: "1.5rem",
-    },
-  },
+
   
-  skillsSection: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "1rem",
-    flexWrap: "wrap",
-    padding: "2rem 1rem",
-    maxWidth: "1200px",
-    margin: "0 auto",
-  },
-  skillCard: {
-    flex: "1 1 200px",
-    maxWidth: "380px",
-    minWidth: "220px",
-    background: "rgba(35, 51, 51, 0.4)",
-    backdropFilter: "blur(10px)",
-    border: "1px solid rgba(255, 255, 255, 0.1)",
-    borderRadius: "15px",
-    padding: "1.5rem",
-    textAlign: "center",
-    transition: "all 0.3s ease",
-    [theme.breakpoints.down(740)]: {
-      flex: "1 1 100%",
-      maxWidth: "100%",
-      display: "flex",
-      flexDirection: "column", // Title on top, list below at 740px
-      alignItems: "center",
-      textAlign: "center",
-    },
-    "&:hover": {
-      transform: "translateY(-10px)",
-      borderColor: "tomato",
-    },
-  },
-  skillList: {
-    color: "tan",
-    listStyle: "none",
-    padding: 0,
-    lineHeight: "1.8",
-    margin: "1rem 0 0 0",
-    [theme.breakpoints.down(740)]: {
-      display: "flex",
-      gap: "1rem",
-      flexWrap: "wrap",
-      justifyContent: "center",
-    }
-  },
+ 
+
+ 
   featuresSection: {
     padding: "4rem 2rem",
     maxWidth: "1100px",
@@ -238,7 +181,7 @@ const Header = () => {
           <Button variant="outlined" className={classes.button} component="a" href="#projects-section">
             View Work
           </Button>
-          <Button variant="outlined" className={classes.button} component="a" href="#resume-section">
+          <Button variant="outlined" className={classes.button} component="a" href="https://drive.google.com/file/d/1x1p39C0rucEwTjeN4rAOkDGkNHQm7eWU/view?usp=sharing">
             Download CV
           </Button>
           <Button variant="outlined" className={classes.button} component="a" href="#contact-section">
@@ -300,11 +243,7 @@ const Header = () => {
 <Box id="contact-section" className={classes.contactSection}>
   <Contact />
 </Box>
-<Box component="footer" className={classes.footer}>
-  <Typography variant="body2">
-    Designed & Built by Saba Yohannes — 2026
-  </Typography>
-</Box>
+<Footer />
     </>
   );
 };

@@ -4,16 +4,13 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 // Image Imports
 import project1 from "../images/Asset.png";
 import project12 from "../images/Assetdashboard.png";
-import project3 from "../images/mern-stack.jpg";
 import project4 from "../images/employee.png";
 
 const useStyles = makeStyles((theme) => ({
